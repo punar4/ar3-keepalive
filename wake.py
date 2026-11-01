@@ -5,7 +5,7 @@ Exits with an error (so GitHub emails you) only if the app is asleep and can't b
 import re
 import sys
 
-from playwright.sync_api import sync_playwright
+from playwright.sync_api import sync_playwright  # type: ignore
 
 URL = "https://ar3-payments.streamlit.app"
 ASLEEP = re.compile(r"gone to sleep|get this app back up|zzz", re.I)
